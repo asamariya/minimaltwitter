@@ -3,15 +3,19 @@
 <% if session[:token].present? %>
   <p>
     <%= session[:username] %>
+    <%= link_to 'Log out', logout_path %>
   </p>
   <% @tweets.each do |tweet| %>
   <div>
     <h2>
       <%= auto_link(tweet.text).html_safe %>
     </h2>
+    <img src="<%= tweet.user.profile_image_uri_https %>" alt="">
     <p>
-      <%= tweet.user.screen_name %>
+      <%= tweet.user.screen_name %> 
     </p>
+    <p>
+    <%= tweet.retweet_count %> retweets</p>
   </div>
   <% end %>
 <% else %>
