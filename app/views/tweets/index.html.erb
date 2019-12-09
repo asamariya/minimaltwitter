@@ -7,7 +7,7 @@
   <% @tweets.each do |tweet| %>
   <div>
     <h2>
-      <%= tweet.text %>
+      <%= auto_link(tweet.text).html_safe %>
     </h2>
     <p>
       <%= tweet.user.screen_name %>
