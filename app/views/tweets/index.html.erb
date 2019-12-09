@@ -4,7 +4,16 @@
   <p>
     <%= session[:username] %>
   </p>
-  <%= @tweets %>
+  <% @tweets.each do |tweet| %>
+  <div>
+    <h2>
+      <%= tweet.text %>
+    </h2>
+    <p>
+      <%= tweet.user.screen_name %>
+    </p>
+  </div>
+  <% end %>
 <% else %>
   <p>
     <a href="/auth/twitter">Log in with Twitter</a>
