@@ -17,6 +17,7 @@ class TweetsController < ApplicationController
     session[:username] = @response[:info][:nickname]
     session[:token] = @response[:credentials][:token]
     session[:token_secret] = @response[:credentials][:secret]
+    session[:image] = @response[:info][:image]
     redirect_to tweets_path
   end
 
@@ -24,6 +25,4 @@ class TweetsController < ApplicationController
     reset_session
     redirect_to tweets_path
   end
-  
-  
 end

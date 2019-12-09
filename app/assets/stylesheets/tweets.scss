@@ -19,6 +19,14 @@ header {
   background-color: #ffffff;
 
   padding: 8px 0;
+  img.profile-img {
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  h1 {
+    flex-grow: 1;
+  }
 }
 
 header a {

@@ -2,7 +2,11 @@
   <header>
     <div class="container">
       <h1>Minimal Twitter</h1>
+
+      <img src='<%= session[:image] %>' alt="" class='profile-img'>
+   
       <p>
+        
         <%= session[:username] %>
         <%= link_to 'Log out', logout_path %>
       </p>
